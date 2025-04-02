@@ -6,7 +6,7 @@ def main():
     user_data = get_user_input()
     
     print("\nUser Input Summary:")
-    print(f"Stock Symbol: {user_data['symbol']}")
+    print(f"Stock Symbol: {user_data['stock_symbol']}")
     print(f"Chart Type: {user_data['chart_type']}")
     print(f"Time Series: {user_data['time_series']}")
     print(f"Start Date: {user_data['start_date']}")

@@ -6,13 +6,13 @@ def get_user_input():
     
     chart_types = ["Bar", "Line"]
     while True:
-        chart_type = input("Enter chart type (bar/line): ").strip()
+        chart_type = input("Enter chart type (Bar/Line): ").strip()
         if chart_type in chart_types:
             break
-        print("Invalid chart. Enter (bar or line).")
+        print("Invalid chart. Enter (Bar or Line).")
         
         
-    time_series_options = ["daily", "weekly", "monthly"]
+    time_series_options = ["Daily", "Weekly", "Monthly"]
     while True:
         time_series = input("Enter time series (Daily/Weekly/Monthly): ").strip()
         if time_series in time_series_options:
@@ -35,7 +35,13 @@ def get_user_input():
         except:
             print("Use YYYY-MM-DD format.")
             
-            return stock_symbol, chart_type, time_series, start_date, end_date
+    return {
+        "stock_symbol" : stock_symbol,
+        "chart_type" : chart_type,
+        "time_series" : time_series,
+        "start_date" : start_date,
+        "end_date" : end_date
+    }
         
         
     
