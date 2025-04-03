@@ -16,7 +16,7 @@ def get_stock_data(stock_symbol, chart_type, time_series, start_date, end_date):
     params = {
             "function": function,
             "symbol": stock_symbol,
-            "apikey": "87NEGSG5QAFMUBW0",  
+            "apikey": "place api key",  
         }
 
     response = requests.get(base_url, params=params)
