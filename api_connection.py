@@ -4,14 +4,14 @@ def get_stock_data(stock_symbol, chart_type, time_series, start_date, end_date):
   base_url = "https://www.alphavantage.co/query"
 
 if time_series == "Daily":
-        function = "TIME_SERIES_DAILY"
-    elif time_series == "Weekly":
-        function = "TIME_SERIES_WEEKLY"
-    elif time_series == "Monthly":
-        function = "TIME_SERIES_MONTHLY"
-    else:
-        print("Invalid time series type.")
-        return None
+    function = "TIME_SERIES_DAILY"
+elif time_series == "Weekly":
+    function = "TIME_SERIES_WEEKLY"
+elif time_series == "Monthly":
+    function = "TIME_SERIES_MONTHLY"
+else:
+    print("Invalid time series type.")
+    return None
 
 params = {
         "function": function,
@@ -29,6 +29,6 @@ if response.status_code == 200:
             return None
         
         return stock_data
-    else:
-        print(f"Error fetching data: {response.status_code}")
-        return None
+else:
+    print(f"Error fetching data: {response.status_code}")
+    return None
