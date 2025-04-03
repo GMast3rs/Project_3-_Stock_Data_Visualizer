@@ -16,7 +16,7 @@ else:
 params = {
         "function": function,
         "symbol": stock_symbol,
-        "apikey": "87NEGSG5QAFMUBW0",  
+        "apikey": "- -",  
     }
 
 response = requests.get(base_url, params=params)
