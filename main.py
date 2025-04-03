@@ -1,6 +1,6 @@
 from user_input import get_user_input 
 from api_connection import get_stock_data
-
+from graph_generator import filter_stock_data, graph_generator
 def main():
     
     user_data = get_user_input()
@@ -23,6 +23,8 @@ def main():
     if stock_data:
         print("\nStock Data Retrieved:")
         print(stock_data)
+        dates, prices = filter_stock_data(stock_data, user_data['start_date'], user_data['end_date'])
+        graph_generator(user_data['chart_type'], dates, prices)
     else:
         print("\nFailed to retrieve stock data.")
         
