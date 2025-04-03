@@ -1,6 +1,6 @@
 from user_input import get_user_input 
 from api_connection import get_stock_data
-
+from graph_generator import graph_generator
 def main():
     
     user_data = get_user_input()
