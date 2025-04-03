@@ -1,5 +1,4 @@
 import pygal
-import webbrowser
 
 def graph_generator(chart_type, dates, prices):
     if chart_type == "Line":
@@ -10,6 +9,6 @@ def graph_generator(chart_type, dates, prices):
         print("somehow got the pass chart check invalid chart type")
         return
     chart._title = "test"
-    
+    chart.x_labels = dates
 
-    return 0
+    chart.render_in_browser()
