@@ -13,7 +13,7 @@ def main():
     print(f"End Date: {user_data['end_date']}")
 
     stock_data = get_stock_data(
-        user_data['stock_symbol']
+        user_data['stock_symbol'],
         user_data['chart_type'],
         user_data['time_series'],
         user_data['start_date'],
